@@ -1,0 +1,16 @@
+:root{
+  --rw:#7B1A2E;
+  --rw-dark:#5C1222;
+  --rw-light:#A8283F;
+  --blush:#F2AFBC;
+  --rose:#F9CBD6;
+  --oat:#F2E0D2;
+  --oat-muted:#D9C4B8;
+  --bg:#0D0608;
+  --bg2:#130A0D;
+  --bg3:#1A0C10;
+  --card:rgba(242,175,188,0.07);
+  --border:rgba(242,175,188,0.13);
+  --border-hover:rgba(242,175,188,0.28);
+  --text-muted:#B89EA8;
+}

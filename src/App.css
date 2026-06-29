@@ -1,0 +1,9 @@
+@import "./styles/variables.css";
+@import "./styles/global.css";
+@import "./styles/Navbar.css";
+@import "./styles/Home.css";
+@import "./styles/Services.css";
+@import "./styles/ServiceDetail.css";
+@import "./styles/Freelancer.css";
+@import "./styles/Footer.css";
+@import "./styles/Auth.css";

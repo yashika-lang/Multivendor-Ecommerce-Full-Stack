@@ -1,0 +1,27 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:
+
+  radial-gradient(circle at top right, #2B0F1C 0%, transparent 35%),
+
+  radial-gradient(circle at bottom left, #1A0C10 0%, transparent 40%),
+
+  #0D0608;
+
+  color:var(--oat);
+  font-family:'Segoe UI',Arial,sans-serif;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+#root{
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding:0;
+}

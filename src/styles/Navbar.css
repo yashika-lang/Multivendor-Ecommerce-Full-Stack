@@ -1,0 +1,73 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13, 6, 8, 0.92);
+    backdrop-filter: blur(14px);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--rose);
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a,
+.nav-links a:visited {
+    text-decoration: none;
+    color: var(--oat-muted);
+    font-size: 15px;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--rose);
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn {
+    background: transparent;
+    color: var(--rose);
+    border: 1px solid var(--border-hover);
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-btn:hover {
+    border-color: var(--rose);
+}
+
+.join-btn {
+    background: var(--rw);
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.join-btn:hover {
+    background: var(--rw-light);
+}
