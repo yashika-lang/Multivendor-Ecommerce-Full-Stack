@@ -1,13 +1,19 @@
 const User = require("../models/User");
 
 const registerUser = async (req, res) => {
+  const { name, email, password } = req.body;
 
-    res.json({
-        message: "Register API Working"
-    });
+  const user = await User.create({
+    name,
+    email,
+    password,
+  });
 
+  res.status(201).json({
+    success: true,
+    message: "User Registered Successfully",
+    user,
+  });
 };
 
-module.exports = {
-    registerUser
-};
+module.exports = { registerUser };
