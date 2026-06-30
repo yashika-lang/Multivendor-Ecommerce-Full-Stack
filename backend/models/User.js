@@ -40,6 +40,46 @@ const userSchema = new mongoose.Schema(
       enum: ["client", "freelancer"],
       default: "client",
     },
+
+    bio: {
+      type: String,
+      default: "",
+      trim: true,
+    },
+
+    skills: [
+      {
+        type: String,
+      },
+    ],
+
+    experience: {
+      type: String,
+      default: "",
+    },
+
+    languages: [
+      {
+        type: String,
+      },
+    ],
+
+    portfolio: [
+      {
+        type: String,
+      },
+    ],
+
+    profileImage: {
+      type: String,
+      default: "",
+    },
+
+    location: {
+      type: String,
+      default: "",
+      trim: true,
+    },
   },
   {
     timestamps: true,

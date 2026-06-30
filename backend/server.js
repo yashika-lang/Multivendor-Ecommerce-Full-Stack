@@ -6,13 +6,18 @@ require("dotenv").config();
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
 const serviceRoutes = require("./routes/serviceRoutes");
+const userRoutes = require("./routes/userRoutes");
+
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+
 connectDB();
+
 app.use("/api/auth", authRoutes);
 app.use("/api/service", serviceRoutes);
+app.use("/api/user", userRoutes);
 
 app.get("/", (req, res) => {
   res.send("HunarHub Backend Running ");
