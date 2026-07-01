@@ -7,6 +7,7 @@ const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
 const serviceRoutes = require("./routes/serviceRoutes");
 const userRoutes = require("./routes/userRoutes");
+const orderRoutes = require("./routes/orderRoutes");
 
 const app = express();
 
@@ -18,6 +19,7 @@ connectDB();
 app.use("/api/auth", authRoutes);
 app.use("/api/service", serviceRoutes);
 app.use("/api/user", userRoutes);
+app.use("/api/order", orderRoutes);
 
 app.get("/", (req, res) => {
   res.send("HunarHub Backend Running ");
