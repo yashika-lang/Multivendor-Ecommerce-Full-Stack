@@ -99,12 +99,35 @@ const updateOrderStatus = async (req, res) => {
       });
     }
 
-    const validStatus = ["Pending", "Accepted", "Completed", "Cancelled"];
-
-    if (!validStatus.includes(status)) {
+    // Pending -> Accepted
+    if (order.status === "Pending" && status !== "Accepted") {
       return res.status(400).json({
         success: false,
-        message: "Invalid status",
+        message: "Pending order can only be accepted.",
+      });
+    }
+
+    // Accepted -> Completed
+    if (order.status === "Accepted" && status !== "Completed") {
+      return res.status(400).json({
+        success: false,
+        message: "Accepted order can only be completed.",
+      });
+    }
+
+    // jo complete hogya usko update nhi kr sakteeee
+    if (order.status === "Completed") {
+      return res.status(400).json({
+        success: false,
+        message: "Completed order cannot be updated.",
+      });
+    }
+
+    // Cancelled cannot be changed
+    if (order.status === "Cancelled") {
+      return res.status(400).json({
+        success: false,
+        message: "Cancelled order cannot be updated.",
       });
     }
 
